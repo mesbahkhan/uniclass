@@ -20,16 +20,16 @@ import (
 
 //def export_nf_ea_com_to_ea(
 func ExportNfEaComToEa(
-//ea_tools_session_manager: EaToolsSessionManagers,
+	//ea_tools_session_manager: EaToolsSessionManagers,
 	ea_tools_session_manager ea_tools_session_orchestrator.EaToolsSessionManagers,
-//nf_ea_com_universe: NfEaComUniverses,
+	//nf_ea_com_universe: NfEaComUniverses,
 	nf_ea_com_universe *com.OlEaComUniverses,
-//folder_path: str):
+	//folder_path: str):
 	folder_path string) {
 
 	//bclearer_stage = \
 	bclearer_stage :=
-	//nf_ea_com_universe.ea_repository.short_name
+		//nf_ea_com_universe.ea_repository.short_name
 		nf_ea_com_universe.EaRepositories.ShortName
 
 	outputFolder := &object_model.Folders{}
@@ -37,7 +37,7 @@ func ExportNfEaComToEa(
 	//current_stage_ea_export_folder_path = \
 	current_stage_ea_export_folder_path :=
 
-	//os.path.join(
+		//os.path.join(
 		filepath.Join(
 			//folder_path,
 			folder_path,
